@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <script>
+    // Your JavaScript goes here!
+
+    console.log("Hello, World!")
+    function add7(num) {
+      return num + 7;
+    }
+
+    const multiplier = function (num1, num2) {
+      return num1 * num2;
+    }
+    console.log("add7: " + add7(7))
+    console.log("multiplier: " + multiplier(3, 5));
+    const lateStageCapitalism = function (myString) {
+      if (typeof myString === 'string') {
+        return myString[0].toUpperCase + myString.substring(1).toLowerCase();
+      }
+      else {
+        return "Not a string :( " + typeof myString
+      }
+    }
+    console.log(lateStageCapitalism(45))
+
+    const lastLetter = (myString) => myString[myString.length - 1];
+    console.log(lastLetter("abcd"));
+    // let sayHi = () => alert("Hello!");
+    // sayHi();
+    function ask(question, yes, no) {
+      if (confirm(question)) yes(); else no();
+    }
+    ask("Do you agree?", () => alert("You agreed"), () => alert("You canceled the program"));
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Ayy Lmao! </title>
+    <!--
+     Meta tags help determine how a page or video
+     is displayed when shared.
+     Search for "meta" tags on pages and jump through
+     until you hit a "og:etc" property.
+     og = open graph -> developed by Facebook to add links
+     and junk
+     important og: url, title, image, description, and site_name
+     Twitter has its own tags too with "twitter:etc"
+     Meta tags attract an audience because they make your work 
+     so shareable and clickable
+ -->
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <!-- 
+             1.   Helpful for screen readers to know
+            what input elements go together
+            2. Creates a nice box around elements
+            3. Looks visually pleasing and Modifiable.
+          -->
+            <legend>Favorites</legend>
+
+            <div>
+                <label>Color</label>
+            </div>
+            <div>
+                <input list="color-list" type="text">
+                <datalist id="color-list">
+                    <!-- Searchable dropdown list -->
+                    <!-- Autocomplete for a textbox -->
+                    <!-- Just recommended options -->
+                    <option value="Red">
+                    <option value="Green">
+                    <option value="Blue">
+                    <option value="Yellow">
+                    <option value="Black">
+                    <option value="White">
+                    <option value="Purple">
+                    <option value="Cyan">
+                    <option value="Pink">
+                </datalist>
+            </div>
+
+            <br>
+
+            <div>
+                <input type="color">
+                <!-- Free colorpicker! -->
+                <input type="time">
+                <!-- 
+                    Essentially dont have to use
+                    css or javascript for some functions as
+                    the input type may already exist!
+                -->
+            </div>
+
+            <br>
+
+            <progress value="50" max="100">
+                <!-- Free progress bar -->
+                <!-- The text below is just 
+                    for screen readers -->
+                50%
+            </progress>
+        </fieldset>
+    </form>
+    <!-- Extra html stuff -->
+    <!-- Sub and Sup elements -->
+    <p>H20</p>
+    <p>H<sub>2</sub>O</p>
+    <p>O2</p>
+    <p>O<sub>2</sub></p>
+    <p>X^2 * Y^4</p>
+    <p>X<sup>2</sup> * Y<sup>4</sup></p>
+    <!-- Helpful for screen readers -->
+    <picture>
+        <!-- Choosing different images for different sized
+            screens -->
+        <!-- source srcset is displayed for a criteria size-->
+        <!-- otherwise img src is the one normally displayed. -->
+        <source srcset=".webp" type="image/webp">
+        <!-- .webp for slightly smaller png. But not all browswers
+            suppor .webp -->
+        <source srcset="" media="(min-width: 900px)">
+        <!-- <source srcset="logo.png 100w, logo-small.png 50w">
+        instead of media you can just specify the sizes you want
+        and the browser will figure it out -->
+        <img src="" style="width: 700px">
+        <!-- Basically go from largest to smallest (for top to bottom) -->
+    </picture>
+    <template>
+        <!-- By default templates dont show up on screen
+            but they can be used by javascript -->
+        <h5>This is a template.
+            <small>Hi</small>
+        </h5>
+    </template>
+    <script>
+        const template = document.querySelector('template');
+        const content = template.content.cloneNode(true)
+        // true cloneNode for deep clone (h5 + small)
+        content.querySelector('small').innerText = "Hello";
+        document.body.append(content);
+        // useful for dynamically adding content to a page or
+        // for changing small things.
+    </script>
+</body>
+
+</html>
