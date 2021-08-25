@@ -105,6 +105,7 @@ input[type="text"] {
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px #f3f3f3 inset;
+  box-shadow: 0 0 0 30px #f3f3f3 inset;
   -webkit-text-fill-color: #2c3e50 !important;
 }
 
@@ -150,7 +151,7 @@ input:-webkit-autofill {
   border: solid 2px #e74c3c;
   background: transparent;
   padding: 0.2rem 0.9rem;
-  margin: 0 0.2rem;
+  margin: 0 0.2rem 2rem;
   border-radius: 1px;
   font-size: 1rem;
   text-transform: uppercase;

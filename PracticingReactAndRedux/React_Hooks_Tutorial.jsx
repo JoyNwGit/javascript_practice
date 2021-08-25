@@ -89,9 +89,12 @@ function App() {
     },
     [count] //to avoid this, add an array of dependencies (allows for more control when state changes updates ui)
     // empty array means no dependencies, meaning it will only run once when the component is initialized
-    // Adding a state will track will rerun the function when that state dependency changes - when count changes
+    // Adding a state will rerun the function when that state dependency changes - when count changes
     )
 
+    // note: Also, do not set the state within the function that updates the state or makes a call to 
+    // update the state. That results in an infinite loop too regardless if you have a dependency. 
+    // I learned this the hard way...
     return (
         <button onClick={() => setCount(count+1)}>
         {count}
